@@ -1,0 +1,23 @@
+public class RightAlignedStarPattern {
+    public static void run() {
+        Integer rows = 5; // You can adjust this number for more or fewer rows.
+        for (Integer i = 1; i <= rows; i++) {
+            String s = '';
+            for (Integer j = rows; j > i; j--) {
+                s += ' ';
+            }
+            for (Integer k = 1; k <= i; k++) {
+                s += '*';
+            }
+            System.debug(s);
+        }
+    }
+}
+/*
+    *
+   **
+  ***
+ ****
+*****
+
+*/
