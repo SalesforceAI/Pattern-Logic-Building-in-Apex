@@ -1,0 +1,49 @@
+public class InvertedPatterns {
+    public static void run() {
+
+        Integer rows = 5;
+
+        // Inverted Left-Aligned
+        System.debug('Inverted Left-Aligned Pattern');
+        for (Integer i = rows; i >= 1; i--) {
+            String s = '';
+            for (Integer j = 1; j <= i; j++) {
+                s += '* ';
+            }
+            System.debug(s);
+        }
+
+        // Inverted Right-Aligned (dots show spaces)
+        System.debug('Inverted Right-Aligned Pattern');
+        for (Integer i = rows; i >= 1; i--) {
+            String s = '';
+
+            // visible spaces
+            for (Integer sp = 1; sp <= rows - i; sp++) {
+                s += '. ';
+            }
+
+            // stars
+            for (Integer st = 1; st <= i; st++) {
+                s += '* ';
+            }
+
+            System.debug(s);
+        }
+    }
+}
+/*
+Inverted Left-Aligned Pattern
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+Inverted Right-Aligned Pattern
+* * * * * 
+. * * * * 
+. . * * * 
+. . . * * 
+. . . . * 
+*/
